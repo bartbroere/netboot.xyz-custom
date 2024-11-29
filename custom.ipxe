@@ -15,8 +15,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-kernel http://tinycorelinux.net/15.x/x86/release/distribution_files/vmlinuz
-initrd http://tinycorelinux.net/15.x/x86/release/distribution_files/core.gz
+kernel https://ftp.nluug.nl/ibiblio/distributions/tinycorelinux/15.x/x86_64/release/distribution_files/vmlinuz64 loglevel=3 initrd=initrd.magic ${cmdline}
+initrd https://ftp.nluug.nl/ibiblio/distributions/tinycorelinux/15.x/x86_64/release/distribution_files/corepure64.gz
 boot || goto custom_exit
 
 :option_two
