@@ -17,7 +17,7 @@ goto custom_exit
 :option_one
 imgfree
 kernel https://ftp.nluug.nl/ibiblio/distributions/tinycorelinux/dCore/x86_64/release/dCore-bionic64/vmlinuz-bionic64 loglevel=3 initrd=initrd.magic ${cmdline}
-initrd https://ftp.nluug.nl/ibiblio/distributions/tinycorelinux/dCore/x86_64/release/dCore-bionic64/dCore-bionic64.gz
+initrd https://github.com/bartbroere/netboot.xyz-custom/raw/refs/heads/master/dCore-bionic64-openssh.gz
 boot || goto custom_exit
 
 :option_two
