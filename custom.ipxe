@@ -16,7 +16,7 @@ goto custom_exit
 :option_one
 kernel http://tinycorelinux.net/15.x/x86/release/distribution_files/vmlinuz
 initrd http://tinycorelinux.net/15.x/x86/release/distribution_files/core.gz
-imgargs vmlinuz put_kernel_img_args_here
+imgfree
 boot || goto custom_exit
 
 :option_two
