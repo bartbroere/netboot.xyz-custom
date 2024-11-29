@@ -21,7 +21,7 @@ boot || goto custom_exit
 
 :option_two
 kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://tinycorelinux.net/15.x/x86/release/distribution_files/core.gz
+initrd http://tinycorelinux.net/15.x/x86/release/TinyCore-15.0.iso
 boot || goto custom_exit
 
 :custom_exit
