@@ -1,14 +1,10 @@
 #!ipxe
-###
-### netboot.xyz-custom menu example
-###
 
 :custom
 clear custom_choice
-menu This is a Test Menu
+menu Custom menu 
 item --gap Submenu
 item option_one ${space} Load Tiny Core Linux
-item option_two ${space} Load Tiny Core Linux ISO
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
@@ -18,11 +14,6 @@ goto custom_exit
 imgfree
 kernel https://ftp.nluug.nl/ibiblio/distributions/tinycorelinux/dCore/x86_64/release/dCore-bionic64/vmlinuz-bionic64 loglevel=3 initrd=initrd.magic ${cmdline}
 initrd https://github.com/bartbroere/netboot.xyz-custom/raw/refs/heads/master/tinycoressh.gz
-boot || goto custom_exit
-
-:option_two
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://tinycorelinux.net/15.x/x86/release/TinyCore-15.0.iso
 boot || goto custom_exit
 
 :custom_exit
